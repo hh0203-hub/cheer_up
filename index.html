@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/scss/css/fonts.css">
     <link rel="stylesheet" href="./assets/scss/css/base.css">
+    <link rel="stylesheet" href="./assets/scss/css/layout.css">
     <link rel="stylesheet" href="./assets/scss/css/page.css">
 </head>
 <body>
@@ -127,91 +128,115 @@
                         </div>
                         <div class="cols-right">
                             <table>
+                                <thead>
                                 <tr>
-                                    <th scope="col">시간</th>
-                                    <th scope="col">상세내용</th>
-                                    <th scope="col">강연자</th>
+                                    <th rowspan="2"><span>시간</span></th>
+                                    <th><span>상세내용</span></th>
+                                    <th><span>강연자</span></th>
                                 </tr>
-                                <tr>
-                                    <td>09:00~10:00</td>
-                                    <td>60’</td>
-                                    <td colspan="2">참가자 등록</td>
-                                </tr>
-                                <tr>
-                                    <td>10:00~10:10</td>
-                                    <td>10’</td>
-                                    <td>오프닝</td>
-                                    <td>남인봉 대표</td>
-                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span>09:00~10:00</span></td>
+                                        <td><span>60’</span></td>
+                                        <td rowspan="2"><span>참가자 등록</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>10:00~10:10</span></td>
+                                        <td><span>10’</span></td>
+                                        <td><span>오프닝</span></td>
+                                        <td><span>남인봉 대표</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4" class="sub-title"><span>Keynote</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>10:10~10:40</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>생성형AI로 보는 최근 구매 트렌드</span></td>
+                                        <td><span>AWS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>10:10~10:40</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>생성형AI로 보는 최근 구매 트렌드</span></td>
+                                        <td><span>AWS</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>10:40~11:10</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>최근 국내외 원자재 시황 이슈 및 전망</span></td>
+                                        <td><span>삼성증권리서치센터</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>11:10~11:50</span></td>
+                                        <td><span>40’</span></td>
+                                        <td rowspan="2"><span>Break Time (전시부스 관람)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4" class="sub-title"><span>Session 1. 상생 (Connect)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>13:30~14:00</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>최신 공급망 ESG 규제동향과 대응전략</span></td>
+                                        <td><span>김앤장 ESG연구소</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>14:00~14:30</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>ESG 사례 발표</span></td>
+                                        <td><span>이콜랩</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>14:30~15:00</span></td>
+                                        <td><span>30’</span></td>
+                                        <td rowspan="2"><span>Break Time (전시부스 관람)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4" ><span>Session 2. 혁신 (Progress)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>15:00~15:30</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>구매 관련 AI 기술 사례(1)</span></td>
+                                        <td><span>TBD</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>15:30~16:00</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>구매 관련 AI 기술 사례(2)</span></td>
+                                        <td><span>TBD</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>16:00~16:30</span></td>
+                                        <td><span>30’</span></td>
+                                        <td rowspan="2"><span>Break Time (전시부스 관람)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>16:30~17:10</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>스타트업 혁신 사례</span></td>
+                                        <td><span>핀포인트. 채널톡</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>17:10~17:40</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>NEXT 구매</span></td>
+                                        <td><span>TBD</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>17:40~</span></td>
+                                        <td><span>30’</span></td>
+                                        <td><span>경품추첨 및 행사 폐회</span></td>
+                                        <td><span>사회자</span></td>
+                                    </tr>
+                                </tbody>
 
-                                <tr>
-                                    <caption>Keynote</caption>
-                                </tr>
 
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>Session 1. 상생 (Connect)</th>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th>Session 2. 혁신 (Progress)</th>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+
+
+
                             </table>
                         </div>
                     </div>
@@ -255,7 +280,7 @@
                                     Connect<br>
                                     상생
                                 </h3>
-                                <ul class="progress-list">
+                                <ul class="connect-list">
                                     <li>
                                         <figure>
                                             <img src="assets/img/sec-3-ic-recycle.png">
@@ -396,13 +421,13 @@
                                             지속가능 경영에 기여하는 구매 전략
                                         </span>
                                     </h2>
-                                    <div class="txt-box">
+                                    <div class="txt-box-1">
                                         <strong>
                                             Proactive
                                         </strong>
-                                        <p>구매 트렌드를 주도하는 아이마켓 코리아의 전략을 살펴보세요.</p>
+                                        <p>구매 트렌드를 주도하는 아이마켓 코리아의 전략을 살펴보세요.<br><br></p>
                                     </div>
-                                    <div class="txt-box">
+                                    <div class="txt-box-2">
                                         <strong>
                                             Continuous
                                         </strong>
@@ -417,6 +442,7 @@
                                                 <figure>
                                                     <img src="assets/img/sec-6-img1.jpg" alt="">
                                                 </figure>
+                                                <p>행사 스케치</p>
                                                 <div class="btn-wrap">
                                                     <button class="btn-play" type="button" aria-label="재생버튼"></button>
                                                 </div>
@@ -427,6 +453,7 @@
                                                 <figure>
                                                     <img src="assets/img/sec-6-img2.jpg" alt="">
                                                 </figure>
+                                                <p>Proactive and Continuous</p>
                                                 <div class="btn-wrap">
                                                     <button class="btn-play" type="button" aria-label="재생버튼"></button>
                                                 </div>
@@ -437,6 +464,7 @@
                                                 <figure>
                                                     <img src="assets/img/sec-6-img3.jpg" alt="">
                                                 </figure>
+                                                <p>지속가능경영을 위한 구매 트렌드</p>
                                                 <div class="btn-wrap">
                                                     <button class="btn-play" type="button" aria-label="재생버튼"></button>
                                                 </div>
@@ -447,6 +475,7 @@
                                                 <figure>
                                                     <img src="assets/img/sec-6-img4.jpg" alt="">
                                                 </figure>
+                                                <p>DX 기반 구매 SCM 혁신 사례</p>
                                                 <div class="btn-wrap">
                                                     <button class="btn-play" type="button" aria-label="재생버튼"></button>
                                                 </div>
@@ -457,6 +486,7 @@
                                                 <figure>
                                                     <img src="assets/img/sec-6-img5.jpg" alt="">
                                                 </figure>
+                                                <p>ESG 구매의 새로운 접근 - Re:mix</p>
                                                 <div class="btn-wrap">
                                                     <button class="btn-play" type="button" aria-label="재생버튼"></button>
                                                 </div>
@@ -469,8 +499,6 @@
                     </div>
                 </div>
             </section>
-            <footer>
-            </footer>
         </div>
         <footer class="footer">
             <div class="group-link">

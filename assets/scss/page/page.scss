@@ -91,30 +91,93 @@
     }
   }
 }
+.sec-3 {
+  .cols-container {
+    margin-top: 30px;
+  }
+  table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 81.5px;
+    tr {
+      display: flex;
+    }
+    td {
+      padding-left: 20px;
+    }
+    span {
+      display: block;
+    }
+  }
+  thead {
+    width: 100%;
+    padding-bottom: 22px;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.1);
+    th {
+      display: flex;
+      padding-left: 20px;
+      &:nth-child(1) {width: 34.91%;}
+      &:nth-child(2) {width: 46.67%;}
+      &:nth-child(3) {width: 18.42%;}
+    }
+  }
+  tbody {
+    td {
+      padding: 18.5px 0 20px 18.5px;
+      &:nth-child(1) {width: 16.67%}
+      &:nth-child(2) {width: 18.33%}
+      &:nth-child(3) {width: 46.75%}
+      &:nth-child(4) {width: 18.33%}
+    }
+  }
+  .sub-title {
+    width: 100%!important;
+    background-color: $point-color1;
+    color: #000;
+  }
+
+
+}
 .sec-4 {
   .cols-left {
     margin-top: 22px;
   }
+  h3 {
+    margin-top: 20px;
+  }
   ul {
     display: flex;
+    gap: 21px;
+    margin-top: 40px;
+    &.connect-list {
+      margin-bottom: 104px;
+    }
+
     li {
+      aspect-ratio: 1/1;
+      width: 22.63%;
+      height: 22.63%;
+
       figure {
-        max-width: 258px;
-        width: 100%;
+        border-radius: 10px;
         background-color: $point-color2;
+        display: grid;
+        place-items: center;
+
+        img{
+          width: 70.33%;
+          height: 70.33%;
+        }
+      }
+      strong {
+        display: block;
+        padding: 10px;
       }
     }
   }
-  .inner {
-    figure {
-      max-width: 258px;
-      width: 100%;
-    }
-    img {
-      width: 200px;
-    }
-  }
 }
+
 .sec-5 {
   .cols-container {
     margin-bottom: 100px;
@@ -172,13 +235,21 @@
 .sec-7 {
   background-color: $point-color2;
   color: #fff;
+  padding-bottom: 213px;
+
   .content {
     &:before {
       display: none;
     }
   }
   .cols-left {
+    position: relative;
+    z-index: 1;
+
     span {
+      position: absolute;
+      top: 0;
+      left: -50%;
       font-size: 840px;
       line-height: 0.8;
       writing-mode: vertical-rl; /* 텍스트를 세로로 표시 */
@@ -186,6 +257,55 @@
     }
   }
   .cols-right {
+    position: relative;
+    z-index: 2;
+
+    .group-top {
+      margin-top: 80px;
+
+      strong {
+        display: block;
+      }
+      p {
+        margin-top: 20px;
+      }
+    }
+    .group-bottom {
+      margin-top: 90px;
+
+      .txt-area {
+        span {
+          display: block;
+        }
+      }
+      .txt-box-1 {
+        padding-top: 40px;
+      }
+      .again-area {
+        margin-top: 90px;
+      }
+      .again-list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 40px;
+
+        li {
+          &:first-child {
+            grid-column: 1 / -1;
+            width: 100%;
+          }
+          a {
+            display: block;
+          }
+          p {
+            padding: 20px 30px 20px 0;
+          }
+        }
+
+      }
+
+    }
   }
 }
 

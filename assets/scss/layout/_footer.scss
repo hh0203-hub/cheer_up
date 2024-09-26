@@ -1,0 +1,25 @@
+//@import "../font/font";
+@import "../util/var";
+@import "../util/util";
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+
+  a {
+    display: block;
+  }
+
+  .link-list {
+    display: flex;
+    gap: 20px;
+
+    li {
+      display: grid;
+      place-items: center;
+      width: 398px;
+      height: 140px;
+      background-color: red;
+    }
+  }
+}
