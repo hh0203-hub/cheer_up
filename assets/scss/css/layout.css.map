@@ -1,0 +1,15 @@
+{
+	"version": 3,
+	"file": "layout.css",
+	"sources": [
+		"../layout/layout.scss",
+		"../layout/_footer.scss",
+		"../util/_var.scss",
+		"../util/_util.scss",
+		"../util/_calc.scss",
+		"../util/_mediaqueries.scss",
+		"../util/_typecheck.scss"
+	],
+	"names": [],
+	"mappings": "ACIA,AAAA,OAAO,AAAC,CACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,MAAM,CAkBf,AApBD,AAIE,OAJK,CAIL,CAAC,AAAC,CACA,OAAO,CAAE,KAAK,CACf,AANH,AAQE,OARK,CAQL,UAAU,AAAC,CACT,OAAO,CAAE,IAAI,CACb,GAAG,CAAE,IAAI,CASV,AAnBH,AAYI,OAZG,CAQL,UAAU,CAIR,EAAE,AAAC,CACD,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,gBAAgB,CAAE,GAAG,CACtB"
+}
