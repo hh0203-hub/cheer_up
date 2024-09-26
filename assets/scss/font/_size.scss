@@ -10,56 +10,56 @@
 
 /* SIZE PC (1920px ~) */
 .font-108-90 {
-  font-size: 90px;
-  line-height: 108 / 90; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(90px);
+  line-height: 1.2;
 }
 .font-60-50 {
-  font-size: 50px;
-  line-height: 62 / 50; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(50px);
+  line-height: 1.24;
 }
 .font-51-42 {
-  font-size: 42px;
-  line-height: 51 / 42; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(42px);
+  line-height: 1.2142;
 }
 .font-48-40 {
-  font-size: 40px;
-  line-height: 48 / 40; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(40px);
+  line-height: 1.2;
 }
 .font-40-30 {
-  font-size: 30px;
-  line-height: 40 / 30; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(30px);
+  line-height: 1.3333;
 }
 .font-36-30 {
-  font-size: 30px;
-  line-height: 36 / 30; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(30px);
+  line-height: 1.2;
 }
 .font-24-24 {
-  font-size: 24px;
-  line-height: 24 / 24; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(24px);
+  line-height:1;
 }
 .font-30-20 {
-  font-size: 20px;
-  line-height: 30 / 20; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(20px);
+  line-height: 1.5;
 }
 .font-36-20 {
-  font-size: 20px;
-  line-height: 36 / 20; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(20px);
+  line-height: 1.8;
 }
 .font-24-20 {
-  font-size: 20px;
-  line-height: 24 / 20; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(20px);
+  line-height: 1.2;
 }
 .font-43-17 {
-  font-size: 17px;
-  line-height: 43 / 17; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(17px);
+  line-height: 2.529;
 }
 .font-36-16 {
-  font-size: 16px;
-  line-height: 24 / 16; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(16px);
+  line-height: 1.5;
 }
 .font-36-14 {
-  font-size: 14px;
-  line-height: 36 / 14; // math.div(98, 82) 대신 사용
+  font-size: calc-vw-desktop(14px);
+  line-height: 2.5714;
 }
 
 
@@ -67,55 +67,55 @@
 @include break-point-between($psd-mobile-width, $psd-tablet-width) {
   .font-108-90 {
     font-size: calc-vw-tablet(90px);
-    line-height: 108 / 90; // math.div(98, 82) 대신 사용
+    line-height: 1.2;
   }
   .font-60-50 {
     font-size: calc-vw-tablet(50px);
-    line-height: 62 / 50; // math.div(98, 82) 대신 사용
+    line-height: 1.24;
   }
   .font-51-42 {
     font-size: calc-vw-tablet(42px);
-    line-height: 51 / 42; // math.div(40, 26) 대신 사용
+    line-height: 1.2142;
   }
   .font-48-40 {
     font-size: calc-vw-tablet(40px);
-    line-height: 48 / 40; // math.div(98, 82) 대신 사용
+    line-height: 1.2;
   }
   .font-40-30 {
     font-size: calc-vw-tablet(30px);
-    line-height: 40 / 30; // math.div(98, 82) 대신 사용
+    line-height: 1.3333;
   }
   .font-36-30 {
     font-size: calc-vw-tablet(30px);
-    line-height: 36 / 30; // math.div(98, 82) 대신 사용
+    line-height: 1.2;
   }
   .font-24-24 {
     font-size: calc-vw-tablet(24px);
-    line-height: 24 / 24; // math.div(98, 82) 대신 사용
+    line-height: 1;
   }
   .font-36-20 {
     font-size: calc-vw-tablet(20px);
-    line-height: 36 / 20; // math.div(98, 82) 대신 사용
+    line-height: 1.8;
   }
   .font-30-20 {
     font-size: calc-vw-tablet(20px);
-    line-height: 30 / 20; // math.div(98, 82) 대신 사용
+    line-height: 1.5;
   }
   .font-24-20 {
     font-size: calc-vw-tablet(20px);
-    line-height: 24 / 20; // math.div(98, 82) 대신 사용
+    line-height: 1.2;
   }
   .font-43-17 {
     font-size: calc-vw-tablet(17px);
-    line-height: 43 / 17; // math.div(98, 82) 대신 사용
+    line-height: 2.529;
   }
   .font-36-16 {
     font-size: calc-vw-tablet(16px);
-    line-height: 24 / 16; // math.div(98, 82) 대신 사용
+    line-height: 1.5;
   }
   .font-36-14 {
     font-size: calc-vw-tablet(14px);
-    line-height: 36 / 14; // math.div(98, 82) 대신 사용
+    line-height: 2.5714;
   }
 }
 
@@ -124,50 +124,50 @@
 @include break-point-max($psd-mobile-width - 1) {
   .font-108-90 {
     font-size: calc-vw-mobile(80px);
-    line-height: 90 / 80; // math.div(98, 82) 대신 사용
+    line-height: 1.125;
   }
   .font-60-50 {
     font-size: calc-vw-mobile(40px);
-    line-height: 48 / 40; // math.div(98, 82) 대신 사용
+    line-height: 1.2;
   }
   .font-51-42 {
     font-size: calc-vw-mobile(42px);
-    line-height: 51 / 42; // math.div(72, 60) 대신 사용
+    line-height: 1.214;
   }
   .font-48-40 {
     font-size: calc-vw-mobile(44px);
-    line-height: 52 / 44; // math.div(98, 82) 대신 사용
+    line-height: 1.1818;
   }
   .font-40-30 {
     font-size: calc-vw-mobile(40px);
-    line-height: 50 / 40; // math.div(98, 82) 대신 사용
+    line-height: 1.25;
   }
   .font-36-30 {
     font-size: calc-vw-mobile(40px);
-    line-height: 48 / 40; // math.div(98, 82) 대신 사용
+    line-height: 1.2;
   }
   .font-24-24 {
     font-size: calc-vw-mobile(30px);
-    line-height: 24 / 30; // math.div(98, 82) 대신 사용
+    line-height: 0.8;
   }
   .font-40-20 {
     font-size: calc-vw-mobile(24px);
-    line-height: 40 / 24; // math.div(98, 82) 대신 사용
+    line-height: 1.666;
   }
   .font-30-20 {
     font-size: calc-vw-mobile(24px);
-    line-height: 36 / 24; // math.div(98, 82) 대신 사용
+    line-height: 1.5;
   }
   .font-24-20 {
     font-size: calc-vw-mobile(24px);
-    line-height: 24 / 24; // math.div(98, 82) 대신 사용
+    line-height: 1;
   }
   .font-43-17 {
     font-size: calc-vw-mobile(24px);
-    line-height: 48 / 24; // math.div(98, 82) 대신 사용
+    line-height: 2;
   }
   .font-36-16 {
     font-size: calc-vw-mobile(20px);
-    line-height: 24 / 20; // math.div(98, 82) 대신 사용
+    line-height: 1.2;
   }
 }

@@ -3,8 +3,17 @@
 @import "../util/util";
 
 .footer {
+  position: relative;
+  z-index: 4;
   width: 100%;
-  margin: 0 auto;
+
+  .footer-inner {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 22px;
+  }
+
 
   a {
     display: block;
@@ -12,14 +21,38 @@
 
   .link-list {
     display: flex;
+    align-items: center;
+    //justify-content: center;
     gap: 20px;
+    margin-top: 60px;
 
     li {
       display: grid;
       place-items: center;
       width: 398px;
       height: 140px;
-      background-color: red;
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+    }
+  }
+
+  .group-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding-bottom: 60px;
+  }
+
+  @include break-point-max($psd-mobile-width - 1) {
+    .link-list {
+      flex-direction: column;
+      li {
+        width: 100%;
+      }
+    }
+
+    .group-bottom {
+      flex-direction: column;
     }
   }
 }
