@@ -1,0 +1,127 @@
+@import "../util/util";
+
+$sans-serif: Dotum, 돋움, 굴림, arial;
+$default-family: 'Pretendard Variable', $sans-serif;
+$en-family: 'Poppins', $sans-serif;
+
+@mixin font-letter-spacing {
+  letter-spacing: 0em;
+  //line-height: math.div(62, 48);
+}
+
+@mixin font-default {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-size: 16px;
+}
+
+@mixin font-black() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 900;
+}
+.font-black {
+  @include font-black;
+}
+
+@mixin font-extraBold() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 800;
+}
+.font-extraBold {
+  @include font-extraBold;
+}
+
+@mixin font-bold() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 700;
+}
+.font-bold {
+  @include font-bold;
+}
+
+@mixin font-semiBold() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 600;
+}
+.font-semiBold {
+  @include font-semiBold;
+}
+
+@mixin font-medium() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 500;
+}
+.font-medium {
+  @include font-medium;
+}
+
+@mixin font-regular() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 400;
+}
+.font-regular {
+  @include font-regular;
+}
+
+@mixin font-light() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 300;
+}
+.font-light {
+  @include font-light;
+}
+
+@mixin font-extraLight() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 200;
+}
+.font-extraLight {
+  @include font-extraLight;
+}
+
+@mixin font-thin() {
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 100;
+}
+.font-thin {
+  @include font-thin;
+}
+
+@mixin font-en() {
+  font-family: $en-family;
+  letter-spacing: -0.02em !important;
+}
+
+.font-en {
+  @include font-en;
+}
+
+@mixin font-bold-semiBold (){
+  @include font-letter-spacing;
+  font-family: $default-family;
+  font-weight: 600;
+
+  @include break-point-max($psd-mobile-width) {
+    @include font-letter-spacing;
+    font-family: $default-family;
+    font-weight: 700;
+  }
+}
+
+.font-bold-semiBold{
+  @include font-bold-semiBold;
+}
+
+/*- font-align -*/
+.font-align-center {
+  text-align: center;
+}

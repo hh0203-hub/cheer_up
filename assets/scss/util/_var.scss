@@ -1,0 +1,29 @@
+// ---------------------------------- Site variables ---------------------------------- //
+$psd-desktop-width: 1920px;
+$psd-tablet-width: 1281px;
+$psd-mobile-width: 651px;
+$psd-mobile-se-width: 400px;
+
+$max-desktop-width: $psd-desktop-width;
+$max-tablet-width: $psd-tablet-width;
+$max-mobile-width: $psd-mobile-width;
+
+$max-content-width: $max-desktop-width; //1920px;
+$min-content-width: $max-mobile-width; //768px;
+
+// frame padding
+$desktop-column-gap: 20px;
+$desktop-row-gap: 16px;
+$desktop-frame-padding: 22px;
+$mobile-column-gap: 10px;
+$mobile-row-gap: 10px;
+$mobile-frame-padding: 30px;
+
+$z-index-helper: 100000;
+
+
+
+$point-color1: #83FDC4;
+$point-color1: #83FDC4;
+$point-color2: #283180;
+$bg-color: #171717;

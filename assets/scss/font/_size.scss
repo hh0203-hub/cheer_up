@@ -1,0 +1,173 @@
+@use 'sass:math';
+@import '../util/util';
+
+/******************
+ - Font Size Guide Assets (Text_Guide)
+ - Naming: font-Mobile-Pc 순서
+******************/
+
+
+
+/* SIZE PC (1920px ~) */
+.font-108-90 {
+  font-size: 90px;
+  line-height: 108 / 90; // math.div(98, 82) 대신 사용
+}
+.font-60-50 {
+  font-size: 50px;
+  line-height: 62 / 50; // math.div(98, 82) 대신 사용
+}
+.font-51-42 {
+  font-size: 42px;
+  line-height: 51 / 42; // math.div(98, 82) 대신 사용
+}
+.font-48-40 {
+  font-size: 40px;
+  line-height: 48 / 40; // math.div(98, 82) 대신 사용
+}
+.font-40-30 {
+  font-size: 30px;
+  line-height: 40 / 30; // math.div(98, 82) 대신 사용
+}
+.font-36-30 {
+  font-size: 30px;
+  line-height: 36 / 30; // math.div(98, 82) 대신 사용
+}
+.font-24-24 {
+  font-size: 24px;
+  line-height: 24 / 24; // math.div(98, 82) 대신 사용
+}
+.font-30-20 {
+  font-size: 20px;
+  line-height: 30 / 20; // math.div(98, 82) 대신 사용
+}
+.font-36-20 {
+  font-size: 20px;
+  line-height: 36 / 20; // math.div(98, 82) 대신 사용
+}
+.font-24-20 {
+  font-size: 20px;
+  line-height: 24 / 20; // math.div(98, 82) 대신 사용
+}
+.font-43-17 {
+  font-size: 17px;
+  line-height: 43 / 17; // math.div(98, 82) 대신 사용
+}
+.font-36-16 {
+  font-size: 16px;
+  line-height: 24 / 16; // math.div(98, 82) 대신 사용
+}
+.font-36-14 {
+  font-size: 14px;
+  line-height: 36 / 14; // math.div(98, 82) 대신 사용
+}
+
+
+/* SIZE TABLET (651px - 1281px) */
+@include break-point-between($psd-mobile-width, $psd-tablet-width) {
+  .font-108-90 {
+    font-size: calc-vw-tablet(90px);
+    line-height: 108 / 90; // math.div(98, 82) 대신 사용
+  }
+  .font-60-50 {
+    font-size: calc-vw-tablet(50px);
+    line-height: 62 / 50; // math.div(98, 82) 대신 사용
+  }
+  .font-51-42 {
+    font-size: calc-vw-tablet(42px);
+    line-height: 51 / 42; // math.div(40, 26) 대신 사용
+  }
+  .font-48-40 {
+    font-size: calc-vw-tablet(40px);
+    line-height: 48 / 40; // math.div(98, 82) 대신 사용
+  }
+  .font-40-30 {
+    font-size: calc-vw-tablet(30px);
+    line-height: 40 / 30; // math.div(98, 82) 대신 사용
+  }
+  .font-36-30 {
+    font-size: calc-vw-tablet(30px);
+    line-height: 36 / 30; // math.div(98, 82) 대신 사용
+  }
+  .font-24-24 {
+    font-size: calc-vw-tablet(24px);
+    line-height: 24 / 24; // math.div(98, 82) 대신 사용
+  }
+  .font-36-20 {
+    font-size: calc-vw-tablet(20px);
+    line-height: 36 / 20; // math.div(98, 82) 대신 사용
+  }
+  .font-30-20 {
+    font-size: calc-vw-tablet(20px);
+    line-height: 30 / 20; // math.div(98, 82) 대신 사용
+  }
+  .font-24-20 {
+    font-size: calc-vw-tablet(20px);
+    line-height: 24 / 20; // math.div(98, 82) 대신 사용
+  }
+  .font-43-17 {
+    font-size: calc-vw-tablet(17px);
+    line-height: 43 / 17; // math.div(98, 82) 대신 사용
+  }
+  .font-36-16 {
+    font-size: calc-vw-tablet(16px);
+    line-height: 24 / 16; // math.div(98, 82) 대신 사용
+  }
+  .font-36-14 {
+    font-size: calc-vw-tablet(14px);
+    line-height: 36 / 14; // math.div(98, 82) 대신 사용
+  }
+}
+
+
+/* SIZE MOBILE (~ 650px) */
+@include break-point-max($psd-mobile-width - 1) {
+  .font-108-90 {
+    font-size: calc-vw-mobile(80px);
+    line-height: 90 / 80; // math.div(98, 82) 대신 사용
+  }
+  .font-60-50 {
+    font-size: calc-vw-mobile(40px);
+    line-height: 48 / 40; // math.div(98, 82) 대신 사용
+  }
+  .font-51-42 {
+    font-size: calc-vw-mobile(42px);
+    line-height: 51 / 42; // math.div(72, 60) 대신 사용
+  }
+  .font-48-40 {
+    font-size: calc-vw-mobile(44px);
+    line-height: 52 / 44; // math.div(98, 82) 대신 사용
+  }
+  .font-40-30 {
+    font-size: calc-vw-mobile(40px);
+    line-height: 50 / 40; // math.div(98, 82) 대신 사용
+  }
+  .font-36-30 {
+    font-size: calc-vw-mobile(40px);
+    line-height: 48 / 40; // math.div(98, 82) 대신 사용
+  }
+  .font-24-24 {
+    font-size: calc-vw-mobile(30px);
+    line-height: 24 / 30; // math.div(98, 82) 대신 사용
+  }
+  .font-40-20 {
+    font-size: calc-vw-mobile(24px);
+    line-height: 40 / 24; // math.div(98, 82) 대신 사용
+  }
+  .font-30-20 {
+    font-size: calc-vw-mobile(24px);
+    line-height: 36 / 24; // math.div(98, 82) 대신 사용
+  }
+  .font-24-20 {
+    font-size: calc-vw-mobile(24px);
+    line-height: 24 / 24; // math.div(98, 82) 대신 사용
+  }
+  .font-43-17 {
+    font-size: calc-vw-mobile(24px);
+    line-height: 48 / 24; // math.div(98, 82) 대신 사용
+  }
+  .font-36-16 {
+    font-size: calc-vw-mobile(20px);
+    line-height: 24 / 20; // math.div(98, 82) 대신 사용
+  }
+}

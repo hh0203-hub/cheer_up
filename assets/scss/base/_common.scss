@@ -1,0 +1,63 @@
+@import "../util/var";
+@import "../util/util";
+
+//IR처리
+.blind{
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+}
+
+//common
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+.content {
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 22px;
+  margin: 0 auto;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #83FDC4;
+  }
+  @include break-point-max($psd-mobile-width - 1){
+      &:before {
+        height: calc-vw-mobile(6px);
+      }
+  }
+}
+.cols-container {
+  display: flex;
+
+  .cols-left {
+    width: 39.6875%;
+  }
+  .cols-right {
+    width: 60.3125%;
+  }
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+html {
+  background-color: red;
+}
