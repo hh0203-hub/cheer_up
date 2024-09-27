@@ -18,6 +18,10 @@ header {
       }
       .cols-left {
         @include vw-pc(margin-top, 13, 1920);
+
+        h3 {
+          letter-spacing: -0.015em !important;
+        }
       }
       .cols-right {
         display: flex;
