@@ -21,16 +21,15 @@
 
   .link-list {
     display: flex;
-    align-items: center;
-    //justify-content: center;
-    gap: 20px;
-    margin-top: 60px;
+    justify-content: center;
+    @include vw-pc(gap, 20, 1920);
+    @include vw-pc(margin-top, 60, 1920);
 
     li {
       display: grid;
       place-items: center;
-      width: 398px;
-      height: 140px;
+      @include vw-pc(width, 398, 1920);
+      @include vw-pc(height, 140, 1920);
       border: 1px solid #ffffff;
       border-radius: 20px;
     }
@@ -39,20 +38,7 @@
   .group-bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 150px;
-    padding-bottom: 60px;
+    @include vw-pc(margin-top, 150, 1920);
+    @include vw-pc(padding-bottom, 60, 1920);
   }
-
-  //@include break-point-max($psd-mobile-width - 1) {
-  //  .link-list {
-  //    flex-direction: column;
-  //    li {
-  //      width: 100%;
-  //    }
-  //  }
-  //
-  //  .group-bottom {
-  //    flex-direction: column;
-  //  }
-  //}
 }

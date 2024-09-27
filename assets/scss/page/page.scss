@@ -1,17 +1,15 @@
 @import "../font/font";
-@import "../util/var";
 @import "../util/util";
 
 
-.title {
-  //@include break-point-min(padding-top, 1080, 1920);
+header {
+  background-color: red;
+  width: 100%;
+  height: 100px;
 }
-
-
-
-
 .sec-kv {
     @include vw-pc(padding-top, 20, 1920);
+    background-color: $point-color2;
 
     .group-top {
       .info-area {
@@ -24,110 +22,56 @@
       .cols-right {
         display: flex;
         justify-content: space-between;
+        position: relative;
+
         .info-area {
           @include vw-pc(margin-top, 13, 1920);
           @include vw-pc(margin-bottom, 90, 1920);
         }
         .copy-area {
-          @include vw-pc(margin-top, 13, 1920);
+          @include vw-pc(margin-top, 0, 1920);
         }
       }
     }
     .group-middle {
+      position: relative;
+      @include vw-pc(padding-bottom, 209, 1920);
+
       .cols-container {
         @include vw-pc(margin-top, 39, 1920);
-        @include vw-pc(margin-bottom, 209, 1920);
       }
       .cols-right {
         position: relative;
         p {
           @include vw-pc(margin-top, 41, 1920);
         }
-        .scroll {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          .stick {
-            @include vw-pc(width, 5);
-            @include vw-pc(height, 24);
-            position: absolute;
-            background-color: #ffffff;
-
-            &:before {
-              position: relative;
-              left: 0;
-              bottom: 0;
-              @include vw-pc(width, 5);
-              @include vw-pc(height, 24);
-              background-color: #83FDC4;
-            }
-          }
-        }
       }
-    }
-    .group-bottom {
-      padding: 0;
-      &.content {
-        &:before {
-          display: none;
-        }
+
+      .scroll-wrap {
+        position: absolute;
+        @include vw-pc(right, 26, 1920);
+        @include vw-pc(bottom, 30, 1920);
       }
-    }
-
-
-  //651 ~ 1280
-  @include break-point-between($psd-mobile-width,$psd-tablet-width - 1) {
-    //padding-top: calc-vw-desktop(20px);
-    background-color: $point-color2;
-
-    .group-top {
-      .info-area {
+      .scroll {
         display: flex;
         flex-direction: column;
-      }
-      .cols-left {
-        @include vw-pc(margin-top, 13);
-      }
-      .cols-right {
-        display: flex;
-        justify-content: space-between;
-        .info-area {
-          @include vw-pc(margin-top, 13);
-          @include vw-pc(margin-bottom, 90);
-        }
-        .copy-area {
-          @include vw-pc(margin-top, 13);
-        }
-      }
-    }
-    .group-middle {
-      .cols-container {
-        @include vw-pc(margin-top, 39);
-        @include vw-pc(margin-bottom, 209);
-      }
-      .cols-right {
-        position: relative;
-        p {
-          @include vw-pc(margin-top, 41);
-        }
-        .scroll {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          .stick {
-            @include vw-pc(width, 5);
-            @include vw-pc(height, 24);
-            position: absolute;
-            background-color: #ffffff;
+        align-items: end;
 
-            &:before {
-              position: relative;
-              left: 0;
-              bottom: 0;
-              @include vw-pc(width, 5);
-              @include vw-pc(height, 24);
-              background-color: #83FDC4;
-            }
+        .stick {
+          position: relative;
+          @include vw-pc(width, 5, 1920);
+          @include vw-pc(height, 48, 1920);
+          background-color: rgba(255, 255, 255, 0.3);
+
+          &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            @include vw-pc(width, 5, 1920);
+            @include vw-pc(height, 24, 1920);
+            background-color: $point-color1;
           }
         }
       }
@@ -140,8 +84,7 @@
         }
       }
     }
-  }
-  //650
+
   @include break-point-max($psd-mobile-width - 1) {
     background-color: $point-color2;
 
@@ -223,12 +166,20 @@
     display: flex;
     .inner {
       flex: 1;
-      @include vw-pc(margin-top, 140);
-      @include vw-pc(margin-bottom, 200);
+      @include vw-pc(margin-top, 140, 1920);
+      @include vw-pc(margin-bottom, 200, 1920);
       h3 {
+        display: flex;
+        flex-direction: column;
         span {
-          display: block;
+          &:first-child {
+            color: #888E8B;
+            @include vw-pc(margin-bottom, 8, 1920);
+          }
         }
+      }
+      p {
+        @include vw-pc(margin-top, 13, 1920);
       }
     }
   }
@@ -236,10 +187,10 @@
 .sec-2 {
   .cols-left,
   .cols-right {
-    @include vw-pc(margin-top, 30);
+    @include vw-pc(margin-top, 30, 1920);
   }
   .cols-right {
-    @include vw-pc(margin-bottom, 100);
+    @include vw-pc(margin-bottom, 100, 1920);
     figure {
       width: 100%;
       //aspect-ratio: 16 / 9; /* 비율 유지, 필요시 수정 */
@@ -254,18 +205,18 @@
 }
 .sec-3 {
   .cols-container {
-    @include vw-pc(margin-top, 300);
+    @include vw-pc(margin-top, 30, 1920);
   }
   table {
     display: flex;
     flex-direction: column;
     width: 100%;
-    @include vw-pc(margin-bottom, 81.5);
+    @include vw-pc(margin-bottom, 81.5, 1920);
     tr {
       display: flex;
     }
     td {
-      @include vw-pc(padding-left, 20);
+      @include vw-pc(padding-left, 20, 1920);
     }
     span {
       display: block;
@@ -273,49 +224,61 @@
   }
   thead {
     width: 100%;
-    @include vw-pc(padding-bottom, 22);
+    @include vw-pc(padding-bottom, 22, 1920);
+    @include vw-pc(margin-bottom, 15, 1920);
+
     border-bottom: 5px solid rgba(255, 255, 255, 0.1);
     th {
       display: flex;
-      padding-left: 20px;
+      @include vw-pc(padding-left, 20, 1920);
       &:nth-child(1) {width: 34.91%;}
       &:nth-child(2) {width: 46.67%;}
       &:nth-child(3) {width: 18.42%;}
+
+      @include vw-pc(font-size, 14, 1920);
+      line-height: 2.57140;
     }
   }
   tbody {
     td {
-      padding: 18.5px 0 20px 18.5px;
+      @include vw-pc(padding-top, 18.5, 1920);
+      @include vw-pc(padding-left, 20, 1920);
+      @include vw-pc(padding-bottom, 18.5, 1920);
       &:nth-child(1) {width: 16.67%}
       &:nth-child(2) {width: 18.33%}
       &:nth-child(3) {width: 46.75%}
       &:nth-child(4) {width: 18.33%}
+
+      @include vw-pc(font-size, 14, 1920);
+      line-height: 2.57140;
     }
   }
   .sub-title {
     width: 100%!important;
     background-color: $point-color1;
     color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
   }
 
 
 }
 .sec-4 {
   .cols-left {
-    margin-top: 22px;
+    @include vw-pc(margin-top, 22, 1920);
   }
   h3 {
     margin-top: 20px;
   }
   ul {
     display: flex;
-    //display: grid;
-    //grid-template-columns: repeat(3,1fr);
-    gap: 21px;
-    margin-top: 40px;
+    @include vw-pc(gap, 21, 1920);
+    @include vw-pc(margin-top, 40, 1920);
 
     &.connect-list {
-      margin-bottom: 104px;
+      @include vw-pc(margin-bottom, 104, 1920);
     }
 
     li {
@@ -324,56 +287,83 @@
       height: 22.63%;
 
       figure {
-        border-radius: 10px;
+        @include vw-pc(border-radius, 10, 1920);
         background-color: $point-color2;
         display: grid;
         place-items: center;
-
-        img{
-          width: 70.33%;
-          height: 70.33%;
-        }
       }
       strong {
         display: block;
         padding: 10px;
+        @include vw-pc(padding, 10, 1920);
       }
+
+      img {
+        &.ai {
+          @include vw-pc(width, 181.45, 1920);
+          @include vw-pc(height, 162.69, 1920);
+        }
+        &.startup {
+          @include vw-pc(width, 121.49, 1920);
+          @include vw-pc(height, 168.25, 1920);
+        }
+        &.recycling {
+          @include vw-pc(width, 158.7, 1920);
+          @include vw-pc(height, 163.25, 1920);
+        }
+        &.green {
+          @include vw-pc(width, 139.61, 1920);
+          @include vw-pc(height, 144.42, 1920);
+        }
+        &.esg {
+          @include vw-pc(width, 199.7, 1920);
+          @include vw-pc(height, 161.44, 1920);
+        }
+      }
+
     }
+
   }
 }
-
 .sec-5 {
   .cols-container {
-    margin-bottom: 100px;
+    @include vw-pc(margin-bottom, 100, 1920);
   }
   .cols-left {
     h2 {
-      margin-top: 24px;
+      @include vw-pc(margin-top, 24, 1920);
     }
   }
   .cols-right {
     display: flex;
-    gap: 20px;
+    @include vw-pc(gap, 20, 1920);
 
     .inner {
       flex: 1;
       h3 {
-        margin-top: 32px;
+        @include vw-pc(margin-top, 32, 1920);
       }
       address {
-        margin-top: 27px;
+        @include vw-pc(margin-top, 27, 1920);
       }
       .btn-wrap {
-        margin-top: 39px;
+        @include vw-pc(margin-top, 39, 1920);
+        button {
+          display: block;
+          @include vw-pc(width, 257, 1920);
+          @include vw-pc(height, 84, 1920);
+          border: 1px solid $point-color1;
+          border-radius: 50px;
+        }
       }
     }
     figure {
       flex: 1;
       width: 100%;
-      height: 427px;
-      border-radius: 15px;
+      @include vw-pc(height, 427, 1920);
+      @include vw-pc(border-radius, 15, 1920);
       overflow: hidden;
-      margin-top: 15px;
+      @include vw-pc(margin-top, 15, 1920);
       img {
         object-fit: cover;
       }
@@ -383,15 +373,17 @@
 .sec-6 {
   .cols-container {
     h2 {
-      margin-top: 24px;
+      @include vw-pc(margin-top, 24, 1920);
+    }
+    ul {
+      @include vw-pc(margin-bottom, 100, 1920);
     }
     li {
-      & + li {
-        border-top: 2px solid #343434;
-      }
+        border-bottom: 2px solid #343434;
     }
     .txt-wrap {
-      padding: 24px 0;
+      @include vw-pc(padding-top, 24, 1920);
+      @include vw-pc(padding-bottom, 24, 1920);
     }
 
   }
@@ -399,7 +391,7 @@
 .sec-7 {
   background-color: $point-color2;
   color: #fff;
-  padding-bottom: 213px;
+  @include vw-pc(padding-bottom, 213, 1920);
 
   .content {
     &:before {
@@ -414,7 +406,7 @@
       position: absolute;
       top: 0;
       left: -50%;
-      font-size: 840px;
+      @include vw-pc(font-size, 840, 1920);
       line-height: 0.8;
       writing-mode: vertical-rl; /* 텍스트를 세로로 표시 */
       color: #404BAA;
@@ -424,18 +416,23 @@
     position: relative;
     z-index: 2;
 
+    h2 {
+      @include vw-pc(padding-bottom, 40, 1920);
+      border-bottom: 6px solid #3578FA;
+    }
+
     .group-top {
-      margin-top: 80px;
+      @include vw-pc(margin-top, 80, 1920);
 
       strong {
         display: block;
       }
       p {
-        margin-top: 20px;
+        @include vw-pc(margin-top, 20, 1920);
       }
     }
     .group-bottom {
-      margin-top: 90px;
+      @include vw-pc(margin-top, 90, 1920);
 
       .txt-area {
         span {
@@ -443,16 +440,16 @@
         }
       }
       .txt-box-1 {
-        padding-top: 40px;
+        @include vw-pc(padding-top, 40, 1920);
       }
       .again-area {
-        margin-top: 90px;
+        @include vw-pc(margin-top, 90, 1920);
       }
       .again-list {
         display: grid;
-        gap: 20px;
+        @include vw-pc(gap, 20, 1920);
         grid-template-columns: repeat(2,1fr);
-        margin-top: 40px;
+        @include vw-pc(margin-top, 40, 1920);
 
         li {
           &:first-child {
@@ -463,7 +460,15 @@
             display: block;
           }
           p {
-            padding: 20px 30px 20px 0;
+            @include vw-pc(padding-top, 20, 1920);
+            @include vw-pc(padding-top, 30, 1920);
+            @include vw-pc(padding-top, 20, 1920);
+          }
+          figure {
+            border: 10px;
+            border-radius: 15px; /* 모서리를 둥글게 */
+            overflow: hidden; /* 이미지가 figure 밖으로 나가지 않도록 */
+
           }
         }
 
