@@ -43,16 +43,16 @@
     padding-bottom: 60px;
   }
 
-  @include break-point-max($psd-mobile-width - 1) {
-    .link-list {
-      flex-direction: column;
-      li {
-        width: 100%;
-      }
-    }
-
-    .group-bottom {
-      flex-direction: column;
-    }
-  }
+  //@include break-point-max($psd-mobile-width - 1) {
+  //  .link-list {
+  //    flex-direction: column;
+  //    li {
+  //      width: 100%;
+  //    }
+  //  }
+  //
+  //  .group-bottom {
+  //    flex-direction: column;
+  //  }
+  //}
 }

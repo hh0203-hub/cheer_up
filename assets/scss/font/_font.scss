@@ -6,7 +6,6 @@ $en-family: 'Poppins', $sans-serif;
 
 @mixin font-letter-spacing {
   letter-spacing: 0em;
-  //line-height: math.div(62, 48);
 }
 
 @mixin font-default {

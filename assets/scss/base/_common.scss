@@ -1,5 +1,6 @@
-@import "../util/var";
 @import "../util/util";
+
+
 
 //IR처리
 .blind{
@@ -30,17 +31,6 @@ section {
     height: 6px;
     background-color: #83FDC4;
   }
-  @include break-point-max($psd-tablet-width){
-    padding: calc-vw-tablet(0 22px);
-    &:before {
-      height: calc-vw-tablet(6px);
-    }
-  }
-  @include break-point-max($psd-mobile-width){
-      &:before {
-        height: calc-vw-mobile(6px);
-      }
-  }
 }
 .cols-container {
   display: flex;
@@ -53,14 +43,15 @@ section {
   }
 
   @include break-point-max($psd-mobile-width) {
+    display: flex;
     flex-direction: column;
-
     .cols-left {
-      width: 100%;
+      width: auto;
     }
     .cols-right {
-      width: 100%;
+      width: auto;
     }
+
   }
 }
 
