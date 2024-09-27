@@ -10,9 +10,7 @@
 
 /* SIZE PC (1920px ~) */
 .font-108-90 {
-  @include vw-convert-pc(font-size, 70);
-  //@include vw-convert-tb(font-size, 50);
-  //@include vw-convert-mo(font-size, 50);
+  @include vw-convert-pc(font-size, 90);
   line-height: 1.2;
 }
 //.font-60-50 {

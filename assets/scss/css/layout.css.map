@@ -5,7 +5,8 @@
 		"../layout/layout.scss",
 		"../layout/_footer.scss",
 		"../util/_var.scss",
-		"../util/_util.scss",
+		"../util/util.scss",
+		"../util/_mediaqueries.scss",
 		"../util/_vw_conversion.scss"
 	],
 	"names": [],

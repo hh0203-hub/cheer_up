@@ -1,10 +1,9 @@
 //@import "../font/font";
-@import "../util/var";
+//@import "../util/var";
 @import "../util/util";
 
 
 .title {
-  background-color: red;
   @include per-convert-pc(padding-top, 1080, 1920);
 }
 

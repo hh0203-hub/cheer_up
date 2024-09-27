@@ -35,15 +35,17 @@
   @if type-of($pc-pixel) == number {
     #{$property}: $pc-pixel*1px;
     #{$property}: $pc-pixel*100/$psd-pixel*1vw;
-    /*   @media (min-width:$psd-pc-width) {
-           #{$property}: $pc-pixel*1px;
-       }*/
+
+    @media (min-width: $psd-pc-width) {
+      #{$property}: $pc-pixel * 1px;
+    }
   }
   @else if type-of($pc-pixel) == string {
     #{$property}: auto;
-    /*     @media (min-width:$psd-pc-width) {
-             #{$property}: auto;
-         }*/
+
+    @media (min-width: $psd-pc-width) {
+      #{$property}: auto;
+    }
   }
   @else if type-of($pc-pixel) == list {
     $px: ();

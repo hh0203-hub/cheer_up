@@ -1,0 +1,19 @@
+
+
+@mixin break-point-max($max) {
+  @include set-mq($max-width: $max) {
+    @content;
+  }
+}
+
+@mixin break-point-between($min, $max) {
+  @include set-mq($min-width: $min, $max-width: $max) {
+    @content;
+  }
+}
+
+@mixin break-point-min($min) {
+  @include set-mq($min-width: $min) {
+    @content;
+  }
+}
