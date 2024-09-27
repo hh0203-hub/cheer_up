@@ -6,7 +6,6 @@ $en-family: 'Poppins', $sans-serif;
 
 @mixin font-letter-spacing {
   letter-spacing: 0em;
-  //line-height: math.div(62, 48);
 }
 
 @mixin font-default {
@@ -109,12 +108,12 @@ $en-family: 'Poppins', $sans-serif;
   @include font-letter-spacing;
   font-family: $default-family;
   font-weight: 600;
-
-  @include break-point-max($psd-mobile-width) {
-    @include font-letter-spacing;
-    font-family: $default-family;
-    font-weight: 700;
-  }
+  //
+  //@include break-point-max($psd-mobile-width) {
+  //  @include font-letter-spacing;
+  //  font-family: $default-family;
+  //  font-weight: 700;
+  //}
 }
 
 .font-bold-semiBold{
