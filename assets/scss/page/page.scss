@@ -11,7 +11,7 @@
 
 
 .sec-kv {
-    @include vw-pc(padding-top, 20);
+    @include vw-pc(padding-top, 20, 1920);
 
     .group-top {
       .info-area {
@@ -19,37 +19,37 @@
         flex-direction: column;
       }
       .cols-left {
-        @include vw-pc(margin-top, 13);
+        @include vw-pc(margin-top, 13, 1920);
       }
       .cols-right {
         display: flex;
         justify-content: space-between;
         .info-area {
-          margin-top: 13px;
-          margin-bottom: 90px;
+          @include vw-pc(margin-top, 13, 1920);
+          @include vw-pc(margin-bottom, 90, 1920);
         }
         .copy-area {
-          margin-top: 13px;
+          @include vw-pc(margin-top, 13, 1920);
         }
       }
     }
     .group-middle {
       .cols-container {
-        margin-top: 39px;
-        margin-bottom: 209px;
+        @include vw-pc(margin-top, 39, 1920);
+        @include vw-pc(margin-bottom, 209, 1920);
       }
       .cols-right {
         position: relative;
         p {
-          margin-top: 41px;
+          @include vw-pc(margin-top, 41, 1920);
         }
         .scroll {
           position: absolute;
           right: 0;
           bottom: 0;
           .stick {
-            width: 5px;
-            height: 24px;
+            @include vw-pc(width, 5);
+            @include vw-pc(height, 24);
             position: absolute;
             background-color: #ffffff;
 
@@ -57,8 +57,8 @@
               position: relative;
               left: 0;
               bottom: 0;
-              width: 5px;
-              height: 24px;
+              @include vw-pc(width, 5);
+              @include vw-pc(height, 24);
               background-color: #83FDC4;
             }
           }
@@ -86,37 +86,37 @@
         flex-direction: column;
       }
       .cols-left {
-        margin-top: 13px;
+        @include vw-pc(margin-top, 13);
       }
       .cols-right {
         display: flex;
         justify-content: space-between;
         .info-area {
-          margin-top: 13px;
-          margin-bottom: 90px;
+          @include vw-pc(margin-top, 13);
+          @include vw-pc(margin-bottom, 90);
         }
         .copy-area {
-          margin-top: 13px;
+          @include vw-pc(margin-top, 13);
         }
       }
     }
     .group-middle {
       .cols-container {
-        margin-top: 39px;
-        margin-bottom: 209px;
+        @include vw-pc(margin-top, 39);
+        @include vw-pc(margin-bottom, 209);
       }
       .cols-right {
         position: relative;
         p {
-          margin-top: 41px;
+          @include vw-pc(margin-top, 41);
         }
         .scroll {
           position: absolute;
           right: 0;
           bottom: 0;
           .stick {
-            width: 5px;
-            height: 24px;
+            @include vw-pc(width, 5);
+            @include vw-pc(height, 24);
             position: absolute;
             background-color: #ffffff;
 
@@ -124,8 +124,8 @@
               position: relative;
               left: 0;
               bottom: 0;
-              width: 5px;
-              height: 24px;
+              @include vw-pc(width, 5);
+              @include vw-pc(height, 24);
               background-color: #83FDC4;
             }
           }
@@ -143,7 +143,6 @@
   }
   //650
   @include break-point-max($psd-mobile-width - 1) {
-    //padding-top: calc-vw-desktop(20px);
     background-color: $point-color2;
 
     .group-top {
@@ -152,37 +151,37 @@
         flex-direction: column;
       }
       .cols-left {
-        margin-top: 13px;
+        @include vw-pc(margin-top, 13);
       }
       .cols-right {
         display: flex;
         justify-content: space-between;
         .info-area {
-          margin-top: 13px;
-          margin-bottom: 90px;
+          @include vw-pc(margin-top, 13);
+          @include vw-pc(margin-bottom, 90);
         }
         .copy-area {
-          margin-top: 13px;
+          @include vw-pc(margin-top, 13);
         }
       }
     }
     .group-middle {
       .cols-container {
-        margin-top: 39px;
-        margin-bottom: 209px;
+        @include vw-pc(margin-top, 39);
+        @include vw-pc(margin-bottom, 209);
       }
       .cols-right {
         position: relative;
         p {
-          margin-top: 41px;
+          @include vw-pc(margin-top, 41);
         }
         .scroll {
           position: absolute;
           right: 0;
           bottom: 0;
           .stick {
-            width: 5px;
-            height: 24px;
+            @include vw-pc(width, 5);
+            @include vw-pc(height, 24);
             position: absolute;
             background-color: #ffffff;
 
@@ -192,6 +191,8 @@
               bottom: 0;
               width: 5px;
               height: 24px;
+              @include vw-pc(width, 5);
+              @include vw-pc(height, 24);
               background-color: #83FDC4;
             }
           }
@@ -222,8 +223,8 @@
     display: flex;
     .inner {
       flex: 1;
-      margin-top: 140px;
-      margin-bottom: 200px;
+      @include vw-pc(margin-top, 140);
+      @include vw-pc(margin-bottom, 200);
       h3 {
         span {
           display: block;
@@ -235,10 +236,10 @@
 .sec-2 {
   .cols-left,
   .cols-right {
-    margin-top: 30px;
+    @include vw-pc(margin-top, 30);
   }
   .cols-right {
-    margin-bottom: 100px;
+    @include vw-pc(margin-bottom, 100);
     figure {
       width: 100%;
       //aspect-ratio: 16 / 9; /* 비율 유지, 필요시 수정 */
@@ -253,18 +254,18 @@
 }
 .sec-3 {
   .cols-container {
-    margin-top: 30px;
+    @include vw-pc(margin-top, 300);
   }
   table {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 81.5px;
+    @include vw-pc(margin-bottom, 81.5);
     tr {
       display: flex;
     }
     td {
-      padding-left: 20px;
+      @include vw-pc(padding-left, 20);
     }
     span {
       display: block;
@@ -272,7 +273,7 @@
   }
   thead {
     width: 100%;
-    padding-bottom: 22px;
+    @include vw-pc(padding-bottom, 22);
     border-bottom: 5px solid rgba(255, 255, 255, 0.1);
     th {
       display: flex;

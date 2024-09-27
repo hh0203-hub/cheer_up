@@ -6,121 +6,113 @@
  - Naming: font-Mobile-Pc 순서
 ******************/
 
-//
-//
-///* SIZE PC (1920px ~) */
+
+
+/* SIZE PC (1920px ~) */
 .font-108-90 {
-  //@include vw-pc(font-size, 90, 1920);
-  @include vw-mo(font-size, 42, 650);
+  @include vw-pc(font-size, 90, 1920);
   line-height: 1.2;
 }
+.font-60-50 {
+  @include vw-pc(font-size, 50, 1920);
+  line-height: 1.24;
+}
+.font-51-42 {
+  @include vw-pc(font-size, 42, 1920);
+  line-height: 1.2142;
+}
+.font-48-40 {
+  @include vw-pc(font-size, 40, 1920);
+  line-height: 1.2;
+}
+.font-40-30 {
+  @include vw-pc(font-size, 30, 1920);
+  line-height: 1.3333;
+}
+.font-36-30 {
+  @include vw-pc(font-size, 30, 1920);
+  line-height: 1.2;
+}
+.font-24-24 {
+  @include vw-pc(font-size, 24, 1920);
+  line-height:1;
+}
+.font-30-20 {
+  @include vw-pc(font-size, 20, 1920);
+  line-height: 1.5;
+}
+.font-36-20 {
+  @include vw-pc(font-size, 20, 1920);
+  line-height: 1.8;
+}
+.font-24-20 {
+  @include vw-pc(font-size, 20, 1920);
+  line-height: 1.2;
+}
+.font-43-17 {
+  @include vw-pc(font-size, 17, 1920);
+  line-height: 2.529;
+}
+.font-36-16 {
+  @include vw-pc(font-size, 16, 1920);
+  line-height: 1.5;
+}
+.font-36-14 {
+  @include vw-pc(font-size, 14, 1920);
+  line-height: 2.57140;
+}
 
-///* SIZE MOBILE (~ 650px) */
-//@include break-point-max($psd-mobile-width) {
-//  @include vw-convert-mo(font-size, 42, 650);
-//}
 
 
-//.font-60-50 {
-//  @include vw-convert-pc(font-size, 50);
-//  line-height: 1.24;
-//}
-//.font-51-42 {
-//  @include vw-convert-pc(font-size, 42);
-//  line-height: 1.2142;
-//}
-//.font-48-40 {
-//  @include vw-convert-pc(font-size, 40);
-//  line-height: 1.2;
-//}
-//.font-40-30 {
-//  @include vw-convert-pc(font-size, 30);
-//  line-height: 1.3333;
-//}
-//.font-36-30 {
-//  @include vw-convert-pc(font-size, 30);
-//  line-height: 1.2;
-//}
-//.font-24-24 {
-//  @include vw-convert-pc(font-size, 24);
-//  line-height:1;
-//}
-//.font-30-20 {
-//  @include vw-convert-pc(font-size, 20);
-//  line-height: 1.5;
-//}
-//.font-36-20 {
-//  @include vw-convert-pc(font-size, 20);
-//  line-height: 1.8;
-//}
-//.font-24-20 {
-//  @include vw-convert-pc(font-size, 20);
-//  line-height: 1.2;
-//}
-//.font-43-17 {
-//  @include vw-convert-pc(font-size, 17);
-//  line-height: 2.529;
-//}
-//.font-36-16 {
-//  @include vw-convert-pc(font-size, 16);
-//  line-height: 1.5;
-//}
-//.font-36-14 {
-//  @include vw-convert-pc(font-size, 14);
-//  line-height: 2.5714;
-//}
-//
-//
-//
-///* SIZE MOBILE (~ 650px) */
-//@include break-point-max($psd-mobile-width) {
-//  .font-108-90 {
-//    @include vw-convert-mo(font-size, 80);
-//    line-height: 1.125;
-//  }
-//  .font-60-50 {
-//    @include vw-convert-mo(font-size, 40);
-//    line-height: 1.2;
-//  }
-//  .font-51-42 {
-//    @include vw-convert-mo(font-size, 42);
-//    line-height: 1.214;
-//  }
-//  .font-48-40 {
-//    @include vw-convert-mo(font-size, 44);
-//    line-height: 1.1818;
-//  }
-//  .font-40-30 {
-//    @include vw-convert-mo(font-size, 40);
-//    line-height: 1.25;
-//  }
-//  .font-36-30 {
-//    @include vw-convert-mo(font-size, 40);
-//    line-height: 1.2;
-//  }
-//  .font-24-24 {
-//    @include vw-convert-mo(font-size, 30);
-//    line-height: 0.8;
-//  }
-//  .font-40-20 {
-//    @include vw-convert-mo(font-size, 24);
-//    line-height: 1.666;
-//  }
-//  .font-30-20 {
-//    @include vw-convert-mo(font-size, 24);
-//    line-height: 1.5;
-//  }
-//  .font-24-20 {
-//    @include vw-convert-mo(font-size, 24);
-//    line-height: 1;
-//  }
-//  .font-43-17 {
-//    @include vw-convert-mo(font-size, 24);
-//    line-height: 2;
-//  }
-//  .font-36-16 {
-//    @include vw-convert-mo(font-size, 20);
-//    line-height: 1.2;
-//  }
-//}
-//
+/* SIZE MOBILE (~ 650px) */
+@include break-point-max($psd-mobile-width) {
+  .font-108-90 {
+    @include vw-mo(font-size, 42, 650);
+    line-height: 1.125;
+  }
+  .font-60-50 {
+    @include vw-mo(font-size, 40, 650);
+    line-height: 1.2;
+  }
+  .font-51-42 {
+    @include vw-mo(font-size, 42, 650);
+    line-height: 1.214;
+  }
+  .font-48-40 {
+    @include vw-mo(font-size, 44, 650);
+    line-height: 1.1818;
+  }
+  .font-40-30 {
+    @include vw-mo(font-size, 40, 650);
+    line-height: 1.25;
+  }
+  .font-36-30 {
+    @include vw-mo(font-size, 40, 650);
+    line-height: 1.2;
+  }
+  .font-24-24 {
+    @include vw-mo(font-size, 30, 650);
+    line-height: 0.8;
+  }
+  .font-40-20 {
+    @include vw-mo(font-size, 24, 650);
+    line-height: 1.666;
+  }
+  .font-30-20 {
+    @include vw-mo(font-size, 24, 650);
+    line-height: 1.5;
+  }
+  .font-24-20 {
+    @include vw-mo(font-size, 24, 650);
+    line-height: 1;
+  }
+  .font-43-17 {
+    @include vw-mo(font-size, 24, 650);
+    line-height: 2;
+  }
+  .font-36-16 {
+    @include vw-mo(font-size, 20, 650);
+    line-height: 1.2;
+  }
+}
+

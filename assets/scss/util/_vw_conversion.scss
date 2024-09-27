@@ -1,16 +1,17 @@
+@import "./var";
 
 //@charset "utf-8";
 
 @mixin vw-pc($property, $px-value, $base-width: 1920) {
   $vw-value: $px-value / ($base-width / 100);
 
-  #{$property}: $vw-value * 1vw;
+  // px 단위를 붙이지 않고 바로 vw 값을 할당
+  #{$property}: #{$vw-value}vw;
 
-  @media (min-width: $base-width) {
-    #{$property}: $px-value * 1px;
+  @media (min-width: #{$base-width}px) {
+    #{$property}: #{$px-value}px;
   }
 }
-
 
 @mixin vw-mo($property, $px-value, $base-width: 650) {
   $vw-value: $px-value / ($base-width / 100);
