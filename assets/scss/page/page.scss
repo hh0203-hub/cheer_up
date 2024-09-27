@@ -1,26 +1,17 @@
-//@import "../font/font";
-//@import "../util/var";
+@import "../font/font";
+@import "../util/var";
 @import "../util/util";
 
 
 .title {
-  @include per-convert-pc(padding-top, 1080, 1920);
+  //@include break-point-min(padding-top, 1080, 1920);
 }
 
 
-@include break-point-min($psd-tablet-width) {
-  background-color: red;
-}
 
-@include break-point-between($psd-mobile-width,$psd-tablet-width - 1) {
-}
-
-@include break-point-max($psd-mobile-width - 1) {
-}
 
 .sec-kv {
-  //1281
-    @include vw-convert-pc(padding-top, 20);
+    @include vw-pc(padding-top, 20);
 
     .group-top {
       .info-area {
@@ -28,7 +19,7 @@
         flex-direction: column;
       }
       .cols-left {
-        margin-top: 13px;
+        @include vw-pc(margin-top, 13);
       }
       .cols-right {
         display: flex;
@@ -82,9 +73,11 @@
         }
       }
     }
+
+
   //651 ~ 1280
   @include break-point-between($psd-mobile-width,$psd-tablet-width - 1) {
-    padding-top: calc-vw-desktop(20px);
+    //padding-top: calc-vw-desktop(20px);
     background-color: $point-color2;
 
     .group-top {
@@ -150,7 +143,7 @@
   }
   //650
   @include break-point-max($psd-mobile-width - 1) {
-    padding-top: calc-vw-desktop(20px);
+    //padding-top: calc-vw-desktop(20px);
     background-color: $point-color2;
 
     .group-top {
