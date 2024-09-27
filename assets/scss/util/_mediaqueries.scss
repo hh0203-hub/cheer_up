@@ -1,19 +1,54 @@
+@import "./var";
 
 
-@mixin break-point-max($max) {
-  @include set-mq($max-width: $max) {
+@mixin set-mq($args...) {
+  $media-type: 'only screen';
+  $media-type-key: 'media-type';
+  $args: keywords($args);
+  $expr: '';
+
+  //@debug 'set-mq::' $media-type $media-type-key $args $expr;
+
+  @if map-has-key($args, $media-type-key) {
+    $media-type: map-get($args, $media-type-key);
+    $args: map-remove($args, $media-type-key);
+  }
+
+  @each $key, $value in $args {
+    @if $value {
+      $expr: "#{$expr} and (#{$key}: #{$value})";
+    }
+  }
+
+  $temp: #{$media-type} #{$expr};
+
+  @media #{$temp} {
     @content;
   }
 }
 
+//1281
+//@include break-point-min($psd-tablet-width)
+@mixin break-point-min($max) {
+  @media (min-width: $psd-tablet-width) {
+    @content;
+  }
+}
+
+//651 ~ 1280
+//@include break-point-between($psd-mobile-width,$psd-tablet-width - 1)
 @mixin break-point-between($min, $max) {
-  @include set-mq($min-width: $min, $max-width: $max) {
+  @media (min-width: $psd-mobile-width + 1) and (max-width: $psd-tablet-width - 1) {
     @content;
   }
 }
 
-@mixin break-point-min($min) {
-  @include set-mq($min-width: $min) {
+//650
+//@include break-point-max($psd-mobile-width - 1)
+@mixin break-point-max($max) {
+  @media (max-width: $psd-mobile-width) {
     @content;
   }
 }
+
+

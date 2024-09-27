@@ -41,6 +41,18 @@ section {
   .cols-right {
     width: 60.3125%;
   }
+
+  @include break-point-max($psd-mobile-width) {
+    display: flex;
+    flex-direction: column;
+    .cols-left {
+      width: auto;
+    }
+    .cols-right {
+      width: auto;
+    }
+
+  }
 }
 
 figure {
